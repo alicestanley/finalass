@@ -1,0 +1,384 @@
+/*
+Project Name: 1000words
+Client: Steven Godfrey
+Author: Alice Stanley
+Developer @GA Melbourne
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{font-size:100%;}
+
+/*setting the body style*/
+body {
+    color: white;             /* light grey */
+    font-size: 0.75em;             /* 16px */
+    font-weight: 300;
+    line-height: 1.4;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*additional styles just for links*/
+a {
+    color: white;
+    font-size: .75em;
+    text-decoration: none;
+}
+
+/* styles for images*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+
+}
+
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about_image{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.shoots-heading{
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+ 
+.hidden{display: none;}
+
+
+/*setting the header and footer styles at the top of every page*/
+header {
+    padding: 1.5em;            
+    overflow: hidden;
+    background: black;        
+}
+
+.logo{
+        display: inline-block;
+}
+footer {
+    background: #575658;       
+    padding: 1.5em 0;
+
+}
+
+footer ul {
+    margin: 1em 0;
+    display: inline-block;
+}   
+
+
+footer li {
+    margin: 0 .625em;          /* 10px */
+    display: inline-block;
+    list-style: none;
+}
+
+footer li a {
+    padding: .5em;}   /* 8px */
+
+footer p {
+    display: inline-block;
+    margin-top: 3em;
+    float: right;
+    padding: .5em;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+h1{
+  font-family:'Pacifico', cursive;
+  color: #D4D3CD;   /*#FFE901*/
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  text-shadow: 2px 2px black;
+  font-size: 3em;
+  font-weight: 300;
+
+}
+
+
+h2{
+    font-family: 'Pacifico', cursive;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 1em;
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+h3 a{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFE901;
+    font-weight: 600;
+    display: inline-block;
+    margin: 1em;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1em;
+    text-align: left; 
+    
+}
+
+.main-nav a,
+ {
+    color: white;
+    }  
+
+.main-nav a {
+    font-size: .85em;             /*16px*/
+    font-weight: 200;
+}
+
+
+footer p {
+    color: white;
+    font-size: .55em;          /* 12px */
+    font-weight: 100;
+
+ }
+
+
+
+/******************************************
+/* MAILCHIMP
+/*******************************************/
+
+/*Register page*/
+.mc-field-group{
+  margin: 0 auto;
+  max-width: 960px;
+    padding:12px; 
+    position:relative;
+}
+
+label{
+    text-align: left;
+/*    margin-right: 15px;*/
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+
+input:not([type="submit"]){
+    width:50%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
+.button{
+    font-family: 'Pacifico', cursive; 
+    width:30%;
+    margin: 1em;
+    float: left;
+    font-weight: bold;   
+    display:inline-block;
+    font-size: 100%;           
+    border: 0;
+    margin-left: 31%;  
+    border-radius: 5px; 
+    background-color: #D4D3CD;
+}
+
+.indicates-required{
+    text-align: right;
+    margin-top: .5em;
+    font-size: .75em;
+    padding-right: 2em;
+}
+
+
+
+
+/******************************************
+/* SLIDER
+/*******************************************/
+
+.shootsgallery{
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+
+.main-nav a {
+    padding: .75em .25em;}  /* 12px 4px */
+.mobile-nav{
+    float:right;
+}
+
+/* Phones -----------------------*/
+@media screen and (max-width:767px) {
+    .page header{padding-bottom:.5em;}
+
+    .main-nav{
+        overflow:hidden;
+        clear:both;
+        margin-top:1em;
+        height:0;
+        transition:height 1s;
+    }
+    .main-nav.open{
+        height:17.5em; /* 280px */
+    }
+
+    .main-nav a {
+        display:block;
+        background:rgba(255,255,255,0.1);
+        margin-top:.5em; /*8px*/
+        padding-left: 1em;
+    }
+
+    /*LAYOUT*/
+    .about_content{
+    text-align: center;
+    display: inline-block;
+    color: blue;
+    }
+
+    input:not([type="submit"]){
+    width:65%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
+    /* Mobile Nav*/
+    .mobile-nav{
+        display: block;
+        position:relative;
+        margin-top:.4em;
+        height:2em;
+        width:2.25em;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span{
+        position:absolute;
+        background: white;
+        width:100%;
+        height:3px;
+        border-radius:30px;
+        transition:all 1s;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span:nth-child(1){top:0px;}
+    .mobile-nav span:nth-child(2){top:.625em;}
+    .mobile-nav span:nth-child(3){top:1.25em;}
+    .mobile-nav.open span:nth-child(1){
+        transform:rotate(45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+    .mobile-nav.open span:nth-child(2){opacity:0;}
+    .mobile-nav.open span:nth-child(3){
+        transform:rotate(-45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+
+
+    /* STATE */
+    a:active,
+    .main-nav a:active{color: white;}
+    .main-nav a:active {background:rgba(255,255,255,0.2);}
+
+
+    
+
+}
+
+/* Tablet/Desktop -----------------------*/
+@media screen and (min-width:768px) {
+
+    /* BASE */
+    html{font-size:1.5em;}
+
+    a:hover,
+    .main-nav a:hover,
+{
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        -webkit-transition:     all .1s;
+        -o-transition:          all .1s;
+        transition:             all .1s;
+    }
+
+    
+    .main-nav {
+        float:right;
+        margin-top: 0.75em;
+    }
+    .main-nav a {
+        margin-left:1.25em;}      /* 30/24 (ie.1.5 x 16px) */
+
+    /* STATE */
+    a:hover,
+    .main-nav a:hover{color: white;}
+
+
+   
+}
